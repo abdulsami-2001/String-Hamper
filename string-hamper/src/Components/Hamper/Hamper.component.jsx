@@ -14,6 +14,8 @@ const Hamper = (props) => {
                 <hr />
                 <div className="container">
                     <h1>Your Text:</h1>
+                    <p>Your Text Contains  { TextAreaValue.text.length !== 0 ?  TextAreaValue.text.split(" ").length : 0 } Words & {TextAreaValue.text.length} Characters</p>
+                    <p>{(TextAreaValue.text.length*(0.00666666666)).toFixed(2)} Minute Read</p>
                     <h4>{TextAreaValue.text === "Enter Your String To Hamper" ? "" : TextAreaValue.text }</h4>
                 </div>
             </div>
