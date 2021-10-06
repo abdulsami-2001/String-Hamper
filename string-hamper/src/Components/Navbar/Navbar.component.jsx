@@ -2,7 +2,6 @@ import React from 'react'
 
 const Navbar = (props) => {
     let {toggleName,updateToggleValue,Mode} =  props
-    console.log(toggleName)
     return (
         <div>
            <nav className={`navbar navbar-expand-lg navbar-${Mode} bg-${Mode}`}>

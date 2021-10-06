@@ -9,17 +9,18 @@ const App = () => {
     const updateToggleValue = () => {
 
         if(toggleName === "Enable Dark Mode"){
-            settoggleName("Enable Light Mode")
+            settoggleName("Disable Dark Mode")
             setMode("dark")
         }else{
-             settoggleName("Enable Dark Mode")
+            settoggleName("Enable Dark Mode")
             setMode("light")
-             
         }
 
     }
 
-    
+    let myStyle = {
+        backgroundColor: "#333"
+    }
 
     const onChangeTextAreaValue = (e) => {
         setTextAreaValue({
@@ -46,10 +47,10 @@ const App = () => {
     }
 
     return (
-        <>
+        <div style={{...myStyle, minHeight:"100vh"}}>
             <Navbar Mode={Mode} setMode={setMode}  updateToggleValue={updateToggleValue} toggleName={toggleName} />
             <Hamper duplicate={duplicate} toLowerCase={toLowerCase} toUpperCase={toUpperCase} TextAreaValue={TextAreaValue} onChangeTextAreaValue={onChangeTextAreaValue} />
-        </>
+        </div>
     )
 }
 
